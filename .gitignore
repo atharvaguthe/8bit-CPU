@@ -1,0 +1,17 @@
+
+cat > .gitignore <<'EOF'
+
+#GHDL
+work-obj*.cf
+*.o 
+*.ali
+
+#simulation ouputs
+*.vcd
+*.ghw 
+*.fst 
+
+#build outputs 
+build/
+dist/
+EOF
