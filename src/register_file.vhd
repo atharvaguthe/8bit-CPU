@@ -18,7 +18,8 @@ entity register_file is
     write_data : in std_logic_vector(7 downto 0);
 
     read_data1 : out std_logic_vector(7 downto 0);
-    read_data2 : out std_logic_vector(7 downto 0)
+    read_data2 : out std_logic_vector(7 downto 0);
+    debug_r3 : out std_logic_vector(7 downto 0)
 
       );
 
@@ -53,6 +54,8 @@ begin
   read_data1 <= regs(to_integer(unsigned(read_addr1)));
 
   read_data2 <= regs(to_integer(unsigned(read_addr2)));
+
+  debug_r3 <= regs(3);
 
 end architecture RTL;
 

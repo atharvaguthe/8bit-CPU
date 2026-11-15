@@ -21,6 +21,7 @@ architecture sim of register_file_tb is
 
   signal read_data1 : std_logic_vector(7 downto 0);
   signal read_data2 : std_logic_vector(7 downto 0);
+  signal debug_r3 : std_logic_vector(7 downto 0);
 
 begin 
 
@@ -38,7 +39,8 @@ begin
     write_data => write_data,
 
     read_data1 => read_data1,
-    read_data2 => read_data2
+    read_data2 => read_data2,
+    debug_r3 => open
          );
 
   clk <= not clk after 5 ns;
